@@ -1,0 +1,11 @@
+.main-cont {
+    background: url("https://themes.estudiopatagon.com/wordpress/groovy/wp-content/themes/groovy/assets/images/background-decoration.svg"
+    ), url("https://themes.estudiopatagon.com/wordpress/groovy/wp-content/themes/groovy/assets/images/background-decoration.svg"
+    );;
+    background-size: auto 100% ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left ;
+    background-position-y: 6rem;
+  
+    height: 100vh;
+}
