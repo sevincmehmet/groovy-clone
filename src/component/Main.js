@@ -22,7 +22,7 @@ const Main = () => {
 
                                     <div className="write-cont-article">
                                         <div className="d-flex write-cont-header">
-                                            <button className="buttons"><span>A</span> Travel</button>
+                                            <button className="link-tag"><span>A</span> Travel</button>
                                             <div className="date">
                                                 september 26, 2019
                                             </div>

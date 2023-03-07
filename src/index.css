@@ -10,11 +10,13 @@
   --text-color: #353a44;
   --content-background-color: #fffacd;
   --border-color: rgba(39,39,39,.75);
-  --epcl-border-color: rgba(39, 39, 39, 0.75);
-  --epcl-transition-bezier: cubic-bezier(0.5,2.5,0.7,0.7);
-  --epcl-small-shadow: 2px 2px 0px 0px #333;
-  --epcl-medium-shadow: 4px 4px 0px 0px #333;
-  --epcl-boxes-shadow: none;
+  --border-color: rgba(39, 39, 39, 0.75);
+  --transition-bezier: cubic-bezier(0.5,2.5,0.7,0.7);
+  --small-shadow: 2px 2px 0px 0px #333;
+  --medium-shadow: 4px 4px 0px 0px #333;
+  --boxes-shadow: none;
+  --transition-bezier: cubic-bezier(.5,2.5,.7,.7);
+
 }
 
 body {

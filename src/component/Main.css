@@ -25,17 +25,48 @@
     background-color: var(--content-background-color);
     padding: 20px;
     margin-bottom: 70px;
+    border-radius: 15px;
 }
-.category-cont .img-cont img {
+.img-cont {
+    -webkit-transition: all .3s var(--transition-bezier);
+    -o-transition: all .3s var(--transition-bezier);
+    transition: all .3s var(--transition-bezier);
+    border-radius: 15px;
+}
+.img-cont:hover{
+    -webkit-transform: translate(-2px,-2px);
+    -ms-transform: translate(-2px,-2px);
+    transform: translate(-2px,-2px);
+    -webkit-box-shadow: var(--medium-shadow);
+    box-shadow: var(--medium-shadow);
+}
+.img-cont img {
     width: 300px;
     height: 380px;
+    border-radius: 15px;
 }
 .profile-photo {
+    border-radius: 25px;
     width: 36.6px;
+    margin-right: 7px;
+    -webkit-transition: all .3s var(--transition-bezier);
+    -o-transition: all .3s var(--transition-bezier);
+    transition: all .3s var(--transition-bezier);   
+
+}
+.profile-photo:hover {
+    -webkit-transform: translate(-2px,-2px);
+    -ms-transform: translate(-2px,-2px);
+    transform: translate(-2px,-2px);
+    -webkit-box-shadow: var(--small-shadow);
+    box-shadow: var(--small-shadow);
 }
 .profile-photo img {
     width: 36.6px;
+    border: 1px solid var(--border-color);
+
 }
+
 
 .write-cont {
     padding: 20px 20px 20px 40px;
@@ -72,8 +103,11 @@
     -o-transition: all .4s ease;
     transition: all .4s ease;
 }
-
-/* .buttons {
+.buttons {
+    box-shadow: var(--small-shadow);
+}
+.link-tag,
+.buttons {
     margin-right: 10px;
     color: var(--black-color);
     display: inline-block;
@@ -81,10 +115,24 @@
     line-height: 1.2;
     margin-right: 10px;
     background: #fff;
-    border: 1px solid var(--epcl-border-color);
+    border: 1px solid var(--border-color);
     border-radius: 25px;
-    -webkit-transition: all .3s var(--epcl-transition-bezier);
-    -o-transition: all .3s var(--epcl-transition-bezier);
-    transition: all .3s var(--epcl-transition-bezier);
-} */
+    -webkit-transition: all .3s var(--transition-bezier);
+    -o-transition: all .3s var(--transition-bezier);
+    transition: all .3s var(--transition-bezier);
+}
 
+.link-tag:hover{
+    -webkit-transform: translate(-1px,-1px);
+    -ms-transform: translate(-1px,-1px);
+    transform: translate(-1px,-1px);
+    -webkit-box-shadow: var(--small-shadow);
+    box-shadow: var(--small-shadow);
+}
+.buttons:hover {
+    -webkit-transform: translate(1px,1px);
+    -ms-transform: translate(1px,1px);
+    transform: translate(1px,1px);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
