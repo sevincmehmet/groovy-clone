@@ -3,7 +3,18 @@
 :root {
   --background-color:#54cbca;
   --white-color:#FFFFFF;
-  --black-color: #333333;
+  --black-color: #333;
+  --main-color: #ff4c60;
+  --secondary-color: #fed267;
+  --titles-color: #333;
+  --text-color: #353a44;
+  --content-background-color: #fffacd;
+  --border-color: rgba(39,39,39,.75);
+  --epcl-border-color: rgba(39, 39, 39, 0.75);
+  --epcl-transition-bezier: cubic-bezier(0.5,2.5,0.7,0.7);
+  --epcl-small-shadow: 2px 2px 0px 0px #333;
+  --epcl-medium-shadow: 4px 4px 0px 0px #333;
+  --epcl-boxes-shadow: none;
 }
 
 body {
@@ -13,7 +24,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
   background-color: var(--background-color);
   font-family: 'Outfit', sans-serif;
 
