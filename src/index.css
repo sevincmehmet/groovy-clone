@@ -10,7 +10,7 @@
   --text-color: #353a44;
   --content-background-color: #fffacd;
   --border-color: rgba(39,39,39,.75);
-  --border-color: rgba(39, 39, 39, 0.75);
+  --border-color: rgba(38, 38, 38, 0.749);
   --transition-bezier: cubic-bezier(0.5,2.5,0.7,0.7);
   --small-shadow: 2px 2px 0px 0px #333;
   --medium-shadow: 4px 4px 0px 0px #333;
