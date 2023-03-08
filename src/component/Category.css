@@ -61,7 +61,7 @@
     color: var(--text-color);
 }
 .write-cont-footer {
-    margin-top:3.6rem;
+    margin-top:1.7rem;
 }
 
 .underline-effect a:not(.buttons):hover {
@@ -83,6 +83,7 @@
 }
 .buttons {
     box-shadow: var(--small-shadow);
+    padding: 5px 25px !important;
 }
 .link-tag,
 .buttons {

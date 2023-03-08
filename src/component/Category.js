@@ -8,10 +8,10 @@ const Category = () => {
 
             {arrCategory.map((oItem, oIndex) => {
                 return (
-                    <div key={oIndex} style={{ backgroundColor: oItem.backgroundColor }} className="d-flex category-cont">
+                    <div key={oIndex} style={{ backgroundColor: oItem.backgroundColor }} className="d-flex category-cont border border-secondary">
                         <div className="category-overlay"></div>
                         <div className="img-cont">
-                            <img src={oItem.imgUrl} alt="" />
+                            <img className="border border-secondary" src={oItem.imgUrl} alt="" />
                         </div>
 
                         <div className="write-cont">
@@ -31,10 +31,10 @@ const Category = () => {
                                             src={oItem.linkTagIcon} width={10} />
                                         {oItem.linkTag}
                                     </button>
-                                    <div className="date d-flex align-items-center ms-3">
+                                    <div className="date d-flex align-items-center ms-3 f-source">
                                         {oItem.date}
                                     </div>
-                                    <div className="min date d-flex align-items-center ms-3">
+                                    <div className="min date d-flex align-items-center ms-3 f-source">
                                         <i className="fa-sharp fa-solid fa-circle me-3" style={{ color: "var(--main-color)", fontSize: "0.4rem" }}></i>
                                         {oItem.min}
                                     </div>
@@ -45,15 +45,15 @@ const Category = () => {
                                     </a>
                                 </div>
 
-                                <div className="write-cont-text h6 fw-light lh-base">
+                                <div className="write-cont-text f-source h6 lh-lg" style={{fontWeight:"400"}}>
                                     {oItem.text}
                                 </div>
 
                                 <div className=" d-flex write-cont-footer justify-content-between">
-                                    <button className="buttons float-start">
+                                    <button className="buttons float-start f-source">
                                         Continue Reading -{">"}
                                     </button>
-                                    <div className="d-flex align-items-center profile float-end" style={{ fontSize: "14px", color: "#424851", fontWeight: "600" }}>
+                                    <div className="d-flex align-items-center profile float-end f-source" style={{ fontSize: "14px", color: "#424851", fontWeight: "600" }}>
                                         <div className="profile-photo ">
                                             <img className="rounded-circle" src={oItem.avatar.avatarImgUrl} alt="profile-photo" />
                                         </div>
