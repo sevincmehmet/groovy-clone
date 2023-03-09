@@ -23,15 +23,42 @@
     height: 380px;
     border-radius: 15px;
 }
+.social {
+    display: block;
+}
+.social-icon {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    vertical-align: middle;
+    font-size: 21px;
+    background-color: #fff;
+    color: var(--black-color);
+    border: 1px solid var(--border-color);
+    -webkit-transition: all .3s var(--transition-bezier);
+    -o-transition: all .3s var(--transition-bezier);
+    transition: all .3s var(--transition-bezier);
+}
+s
+.social-icon img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon,
 .profile-photo {
     border-radius: 25px;
-    width: 36.6px;
     margin-right: 7px;
     -webkit-transition: all .3s var(--transition-bezier);
     -o-transition: all .3s var(--transition-bezier);
     transition: all .3s var(--transition-bezier);   
 
 }
+.social-icon:hover,
 .profile-photo:hover {
     -webkit-transform: translate(-2px,-2px);
     -ms-transform: translate(-2px,-2px);
@@ -40,11 +67,12 @@
     box-shadow: var(--small-shadow);
 }
 .profile-photo img {
-    width: 36.6px;
+    
     border: 1px solid var(--border-color);
-
 }
-
+.profile-photo img {
+    width: 36.6px;
+}
 
 .write-cont {
     padding: 20px 20px 20px 40px;
@@ -63,7 +91,9 @@
 .write-cont-footer {
     margin-top:1.7rem;
 }
-
+.underline-effect{
+    width: initial;
+}
 .underline-effect a:not(.buttons):hover {
     color: var(--titles-color)!important;
     background-size: 100% 5%;

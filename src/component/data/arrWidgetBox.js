@@ -13,7 +13,7 @@ export default [
         <RecentPosts />
     ],
     [
-        "Fpllow me!",
+        "Follow me!",
         <FollowMe />
     ],
     [
