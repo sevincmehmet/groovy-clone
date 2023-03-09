@@ -1,3 +1,5 @@
+import AboutMeSection from "../AboutMeSection";
+
 export default [
     {
         id:"0",
