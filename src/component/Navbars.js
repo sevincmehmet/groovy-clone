@@ -1,11 +1,17 @@
 import "./Navbars.css";
 import logo from "./assets/logo-groovy.png";
-const Navbars = () => {
+import { useState } from "react";
+import arrFollow from "./data/arrFallow"
+const Navbars = ({
+    scrolActive
+}) => {
+
+
     return (
         <>
-            <nav className="navs navbar navbar-expand-xl navbar-light ">
-                <div className="container-fluid">
-                    <a className="logo-div" href="#">
+            <nav className={scrolActive ? "navsActive navbar navbar-expand-xl navbar-light ":"navs navbar navbar-expand-xl navbar-light " }>
+                <div className={scrolActive? "container-fluid": "container-fluid"}>
+                    <a className={scrolActive?"logo-div logo-position":"logo-div"} href="#">
                         <img src={logo} width={170} height={45.78} alt="logo" />
                     </a>
                     <button
@@ -19,12 +25,12 @@ const Navbars = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div className={scrolActive?"collapse navbar-collapse ul-position":"collapse navbar-collapse"} id="navbarSupportedContent">
+                        <ul className="float-end navbar-nav me-auto mb-2 mb-lg-0">
                             <li>
-                                <div className="dropdown">
+                                <div className="nav-item dropdown">
                                     <button
-                                        className="nav-item dropbtn"
+                                        className=" dropbtn"
                                         style={{ padding: "1px 6px" }}
                                     >
                                         Home
@@ -104,6 +110,18 @@ const Navbars = () => {
                                     style={{ padding: "1px 6px" }}
                                 >
                                     <a href="#">Contact</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="nav-icons d-flex">
+                                    <i className="ms-3 me-3 fa-sharp fa-solid fa-magnifying-glass nav-item"></i>
+                                    <div className={scrolActive?"d-none":""}>
+                                    {arrFollow.map((oItem, oIndex) => {
+                                        return(
+                                            <i key={oIndex} className={oItem.icon + " nav-item ms-2 me-2"} style={{color:oItem.iconColor, fontSize:"1.2rem"}}></i>
+                                        )
+                                    })}
+                                    </div>
                                 </div>
                             </li>
                         </ul>

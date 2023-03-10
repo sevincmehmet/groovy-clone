@@ -1,57 +1,59 @@
 import Navbars from "./Navbars";
 import Category from "./Category";
 import WidgetBox from "./WidgetBox";
-import AboutMeSection from "./AboutMeSection";
+import Footer from "./Footer";
 import arrWidgetBox from "./data/arrWidgetBox";
-import TagCloud from "./TagCloud"
-import RecentPosts from "./RecentPosts";
-import FollowMe from "./FollowMe";
+
 import "./Main.css"
+import { useEffect, useState } from "react";
 
 
 
 const Main = () => {
+
+    const[scrolActive, setScroolActive] = useState(false)
+    const [top, setTop] = useState(0);
+
+    const scroolAnimate = () => {
+    if (window.scrollY > 280) {
+        setScroolActive(true)
+    } else if (window.scrollY < 250) {
+        setScroolActive(false)
+    }
+
+    if (window.scrollY > 850) {
+        
+    }
+
+};
+
+window.addEventListener("scroll", scroolAnimate);
+
     return (
         <>
             <div className="container-xl main-cont">
                 <div className="smal-cont">
-                    <Navbars />
-                    <div className="row">
+                    <Navbars scrolActive={scrolActive}/>
+                    <div className={scrolActive? "row t-300": "row"}>
+                        
                         {/* left-container */}
-                        <div className="col-sm-8 left-cont">
+                        <div className="col-sm-8 left-cont ">
                             <Category />
+
+                            <div className="d-flex justify-content-center">
+                            <h6 className="me-4">
+                                Page of <span>1/3</span>
+                            </h6>
+                            <button className="buttons bg-danger text-light">
+                                Next
+                            </button>
+                            </div>
                         </div>
+
+
                         {/* right container */}
-                        <div className="col-sm-4 right-cont">
-                            {/* <div className="widget-box position-relative border border-secondary">
-                                <div className="widget-title p-2 border border-2 border-secondary rounded-pill " style={{ padding: "4px 25px" }}>
-                                    About Me
-                                </div>
-
-                                <div className="d-flex about-profile">
-                                    <img
-
-                                        className="profile-photo border border-secondary rounded-circle"
-                                        style={{ width: "80px" }}
-                                        src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg" alt="profile-photo" />
-
-                                    <div className="user ms-3">
-                                        <div className="userName underline-effect pb-1">
-                                            <a href="#" style={{ textDecoration: "none", color: "var(--black-color)", fontWeight: "600", fontSize: 18 }}>Jonathan Doe</a>
-                                        </div>
-                                        <div className="userJob f-source mb-1 fw-400" style={{ fontSize: "14px" }}>
-                                            Founder & Editor
-                                        </div>
-                                        <div className="social-icons">
-                                            iconlar
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="about-text h6 lh-lg f-source fw-400" style={{ fontSize: 14, marginTop: "15px", marginBottom: "0", color: "var(--text-color)" }}>
-                                    Hello! My name is Jonathan Doe working from Chile. I create some Ghost and Wordpress themes for differents markets, also, i offer live support via our ticket system.
-
-                                </div>
-                            </div> */}
+                        <div className="col-sm-4 right-cont position-relative" >
+                            <div className="position-cont" style={{ minHeight:2000}}>
                             {arrWidgetBox.map((oItem, oIndex) => {
                                 return (
                                     <div key={oIndex}>
@@ -63,10 +65,15 @@ const Main = () => {
                                     )
                             })
                             }
+                            </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <div className="footer">
+                <Footer />
             </div>
 
         </>

@@ -1,14 +1,28 @@
 .navs {
     border-radius: 100px;
     background-color: var(--white-color);
-    /* position: absolute;
-    top: 3.8rem;
-    left: 8.8rem;
-    right: 8.8rem; */
     margin:3.8rem 0 4.4rem;
     padding: 1.55rem 2.86rem ;
     border: 1px solid var(--border-color);
+    font-family: var(--Outfit);
+    font-weight: 300;
 }
+.navsActive {
+    background-color: var(--white-color);
+    margin: 0 auto;
+    padding: 3px 2.86rem ;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    height: 77.19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navsActive a,
 .navs a {
   color: var(--black-color);
   text-decoration: none;
@@ -16,20 +30,24 @@
 .logo-div {
   margin-right: 2.8rem;
 }
+.navsActive a:hover,
 .navs a:hover {
   color: var(--main-color);
 }
 .nav-item {
     font-size: 15px;
     color: var(--black-color);
-
+    padding: 10px 7.5px 10px 6.5px;
 }
 .dropbtn {
     color: var(--black-color);
     margin: 0 px;
     border: none;
     background-color: var(--white-color);
-    font-weight: 400;
+    font-weight: 300;
+    display: flex;
+    position: relative;
+    top: calc(21%);
   }
   
   .dropdown {
@@ -59,3 +77,11 @@
   
   .dropdown:hover .dropdown-content {display: block;}
   
+  .logo-position {
+    position: absolute;
+    left: 8.4rem
+  }
+  .ul-position {
+    position: absolute;
+    right: 6.4rem
+  }
