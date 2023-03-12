@@ -4,21 +4,25 @@ import FollowMe from "../FollowMe";
 import TagCloud from "../TagCloud";
 
 export default [
-    [
+    [   
         "About Me",
-        <AboutMeSection />
+        <AboutMeSection />,
+        "aboutMe"
     ],
     [
         "Recent Posts",
-        <RecentPosts />
+        <RecentPosts />,
+        "recentPosts"
     ],
     [
         "Follow me!",
-        <FollowMe />
+        <FollowMe />,
+        "followMe"
     ],
     [
         "Tag Cloud",
-        <TagCloud />
+        <TagCloud />,
+        "tagCloud"
     ],
 
 ]

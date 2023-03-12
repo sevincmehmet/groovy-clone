@@ -4,80 +4,111 @@ import WidgetBox from "./WidgetBox";
 import Footer from "./Footer";
 import arrWidgetBox from "./data/arrWidgetBox";
 
-import "./Main.css"
-import { useEffect, useState } from "react";
-
-
+import "./Main.css";
+import { useState, useEffect } from "react";
 
 const Main = () => {
+    const [scrolActive, setScroolActive] = useState(false);
+    const [windowSize, setWindowSize] = useState([
+        window.innerWidth,
+        window.innerHeight,
+    ]);
 
-    const[scrolActive, setScroolActive] = useState(false)
-    const [top, setTop] = useState(0);
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowSize([window.innerWidth, window.innerHeight]);
+        };
+
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => {
+            window.removeEventListener("resize", handleWindowResize);
+        };
+    });
 
     const scroolAnimate = () => {
-    if (window.scrollY > 280) {
-        setScroolActive(true)
-    } else if (window.scrollY < 250) {
-        setScroolActive(false)
-    }
+        if (window.scrollY > 280) {
+            setScroolActive(true);
+        } else if (window.scrollY < 250) {
+            setScroolActive(false);
+        }
 
-    if (window.scrollY > 850) {
-        
-    }
+        if (window.scrollY > 850) {
+        }
+    };
 
-};
-
-window.addEventListener("scroll", scroolAnimate);
+    window.addEventListener("scroll", scroolAnimate);
 
     return (
         <>
             <div className="container-xl main-cont">
                 <div className="smal-cont">
-                    <Navbars scrolActive={scrolActive}/>
-                    <div className={scrolActive? "row t-300": "row"}>
-                        
+                    <Navbars scrolActive={scrolActive} />
+                    <div
+                        className={scrolActive ? "row t-300" : "row"}
+                        style={{ height: "100%" }}
+                    >
                         {/* left-container */}
-                        <div className="col-sm-8 left-cont ">
+                        <div
+                            className={
+                                windowSize[0] < 1023.98
+                                    ? "col-sm-12 left-cont "
+                                    : "col-sm-8 left-cont "
+                            }
+                        >
                             <Category />
 
-                            <div className="d-flex justify-content-center">
-                            <h6 className="me-4">
-                                Page of <span>1/3</span>
-                            </h6>
-                            <button className="buttons bg-danger text-light">
-                                Next
-                            </button>
+                            <div className="p-4 d-flex justify-content-center">
+                                <h6
+                                    className="me-4 f-source"
+                                    style={{
+                                        fontSize: 14,
+                                        fontWeight: 600,
+                                        color: "var(--text-color)",
+                                        letterSpacing: 0.8,
+                                    }}
+                                >
+                                    Page 1 of 3
+                                </h6>
+                                <button
+                                    className=" link-tag bg-danger text-light position-relative"
+                                    style={{ bottom: 7 }}
+                                >
+                                    Next
+                                </button>
                             </div>
                         </div>
 
-
                         {/* right container */}
-                        <div className="col-sm-4 right-cont position-relative" >
-                            <div className="position-cont" style={{ minHeight:2000}}>
-                            {arrWidgetBox.map((oItem, oIndex) => {
-                                return (
-                                    <div key={oIndex}>
-                                        <WidgetBox
-                                        title={oItem[0]}
-                                        articleSection={oItem[1]}
-                                    />
-                                    </div>
-                                    )
-                            })
+                        <div
+                            className={
+                                windowSize[0] < 1023.98
+                                    ? "col-sm-12 right-cont position-relative"
+                                    : "col-sm-4 right-cont position-relative"
                             }
+                        >
+                            <div className="position-cont" style={{ minHeight: "auto" }}>
+                                {arrWidgetBox.map((oItem, oIndex) => {
+                                    return (
+                                        <div key={oIndex}>
+                                            <WidgetBox
+                                                title={oItem[0]}
+                                                articleSection={oItem[1]}
+                                            />
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div className="footer">
-                <Footer />
+            <div className="container-fluid footer">
+                <Footer screenSize={windowSize[0]}/>
             </div>
-
         </>
-    )
-}
+    );
+};
 
 export default Main;

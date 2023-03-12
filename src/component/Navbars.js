@@ -1,6 +1,5 @@
 import "./Navbars.css";
 import logo from "./assets/logo-groovy.png";
-import { useState } from "react";
 import arrFollow from "./data/arrFallow"
 const Navbars = ({
     scrolActive

@@ -26,3 +26,9 @@
     -webkit-box-shadow: var(--small-shadow);
     box-shadow: var(--small-shadow);
 }
+.recent-cont .article {
+    height: 65.6px;
+}
+.recent-cont .article .underline-effect .recent-title {
+    font-size: 15px;
+}
