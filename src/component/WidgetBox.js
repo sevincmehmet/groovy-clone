@@ -2,10 +2,6 @@ import { useEffect } from "react";
 import "./WidgetBox.css"
 const WidgetBox = ({  id, title, articleSection }) => {
 
-    useEffect(()=> {
-        console.log(id+" "+title);
-    },[])
-
     return (
         <>
             <div id={id} className="widget-box position-relative">

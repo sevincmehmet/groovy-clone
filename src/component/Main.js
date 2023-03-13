@@ -41,9 +41,6 @@ const Main = () => {
 
     return (
         <>
-        <a to="/#">
-            Learn React
-        </a>
             <div className="container-xl main-cont">
                 <div className="smal-cont">
                     <Navbars scrolActive={scrolActive} />

@@ -42,6 +42,15 @@
         padding: 55px 10px 30px;
     }
 }
+@media (max-width: 1023.98px) {
+    .write-cont-article {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .left-cont {
+        padding: 0;
+    }
+}
 
 @media (max-width: 1200.98px) {
     .write-cont-title a {
@@ -86,5 +95,10 @@
 @media (max-width: 991.98px) {
     .right-cont {
         padding-left: 0px;
+    }
+}
+@media (max-width: 767.98px) {
+    .category-cont {
+        display: block;
     }
 }

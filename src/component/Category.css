@@ -4,8 +4,9 @@
     margin-bottom: 70px;
     border-radius: 15px;
     position: relative;
-    
+    display: flex;
 }
+
 .img-cont {
     height: 100%;
     -webkit-transition: all .3s var(--transition-bezier);
@@ -78,8 +79,12 @@ s
 }
 
 .write-cont {
+    width: 100%;
+    height: auto;
     padding: 20px 20px 20px 40px;
+    position: relative;
 }
+
 .write-cont-title{
     margin: 25px 0px 15px ;
     font-weight: 800;

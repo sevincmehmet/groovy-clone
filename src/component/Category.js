@@ -7,7 +7,7 @@ const Category = () => {
 
             {arrCategory.map((oItem, oIndex) => {
                 return (
-                    <div key={oIndex} style={{ backgroundColor: oItem.backgroundColor }} className="d-flex category-cont border border-secondary">
+                    <div key={oIndex} style={{ backgroundColor: oItem.backgroundColor }} className=" category-cont border border-secondary">
                         <div className="img-cont">
                             <img className="border border-secondary" src={oItem.imgUrl} alt="" />
                         </div>
